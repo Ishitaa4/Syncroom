@@ -1,0 +1,56 @@
+.landingPageContainer{
+  width:100vw;
+  height:100vh;
+  background: url("/public/media/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.landingPageContainer nav{
+  padding-inline: 1.2rem;
+  padding-block: 2.0 rem;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landingPageContainer nav h2{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.landingPageContainer nav .navlist{
+  display:flex;
+  gap:1.6rem;
+  cursor: pointer;
+}
+.mainContainer{
+  display :flex;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  height: 80vh;
+  width:auto;
+  align-items: center;
+}
+.mainContainer >div:nth-child(1) {
+  font-size: 2rem;
+}
+.mainContainer >div:nth-child(1) div[role="button"]{
+  background: rgb(231, 172, 44);
+  width: fit-content;
+  border-radius: 20px;
+  padding: 12px;
+  margin-top: 1.4rem;
+}
+.mainContainer >div:nth-child(1) div[role="button"] a{
+  text-decoration:none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.mainContainer >div:nth-child(2) img{
+  height: 60vh;
+  width:auto;
+}
+
+span {
+  color: orange !important;
+}
