@@ -6,7 +6,8 @@ import mongoose from "mongoose";
 import cors from "cors";
 import connectToSocket from "./controller/socketManager.js"
 import userRoutes from "./routes/usersRoutes.js";
-
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const server = createServer(app);
@@ -24,7 +25,7 @@ app.use("/api/v1/users", userRoutes);
 
 
 const start= async()=>{app.set("mongo_user")
-const connectionDb = await mongoose.connect("mongodb+srv://Ishita_Syncroom:Ishita2004@cluster0.zifdpv5.mongodb.net/?appName=Cluster0");
+const connectionDb = await mongoose.connect(process.env.MONGO_URI);
 console.log("Connected to db");
 try{
     server.listen(app.get("port"),()=>{
